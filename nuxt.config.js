@@ -57,8 +57,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss',
+    '@nuxtjs/vuetify',
   ],
   /*
    ** Nuxt.js modules
@@ -104,4 +103,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  env: {
+    vapidPublicKey:
+      'BDNncBVemGi3qzTYfRXW9_kUVRbvnCo5KKkq-6Lj1_QfiuAKW4cqAbBAvft7c7d8W2ob1rC-tLbVnoZsrvQf0bo',
+    vapidPrivateKey: 'v7dubS1VyA_AgDM_6Zhf2cUwLjjq2kKrGsOC767gTBk',
+  },
 }

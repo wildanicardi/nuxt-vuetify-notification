@@ -7,9 +7,9 @@
             Email
           </label>
           <input
+            v-model="form.email"
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
-            v-model="form.email"
             placeholder="email"
           />
         </div>
@@ -21,9 +21,9 @@
             Password
           </label>
           <input
+            v-model="form.password"
             class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             type="password"
-            v-model="form.password"
             placeholder="******************"
           />
           <p class="text-red-500 text-xs italic">Please choose a password.</p>

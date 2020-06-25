@@ -1,16 +1,21 @@
 <template>
   <v-row justify="center">
-    <v-dialog v-model="dialog" persistent max-width="290">
+    <v-dialog v-model="dialog" persistent max-width="500">
       <v-card>
-        <v-card-title class="headline">Turn On Notifications</v-card-title>
+        <v-card-title class="headline">
+          Aktifkan Permission Notifikasi
+        </v-card-title>
         <v-card-text>
-          Know right away when people follow you or like and comment on your
-          photos.
+          Aktifkan permission notifikasi di browser anda agar dapat menikmati
+          fitur notifikasi di ETHOL
         </v-card-text>
         <v-divider></v-divider>
         <v-card-actions>
           <v-btn color="blue darken-1" text block @click="$emit('action')">
-            Turn On
+            oke
+            <v-icon right size="18">
+              mdi-thumb-up-outline
+            </v-icon>
           </v-btn>
         </v-card-actions>
       </v-card>

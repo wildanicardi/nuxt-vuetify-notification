@@ -77,6 +77,10 @@ export default {
     credentials: false,
   },
   auth: {
+    redirect: {
+      login: '/',
+      callback: '/',
+    },
     strategies: {
       local: {
         endpoints: {

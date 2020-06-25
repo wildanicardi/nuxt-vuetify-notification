@@ -12,13 +12,11 @@ export default {
   components: { AppDialog },
   data() {
     return {
-      modal: true,
+      modal: false,
     }
   },
-  created() {
-    if (process.client) {
-      this.subscription()
-    }
+  mounted() {
+    this.subscription()
   },
   methods: {
     subscription() {
@@ -48,7 +46,7 @@ export default {
         sw.pushManager.getSubscription().then((sub) => {
           // cek apakah device ini sudah subscribe atau belum
           if (sub === null) {
-            that.modal = true
+            // that.modal = true
             sw.pushManager
               .subscribe({
                 userVisibleOnly: true,
@@ -62,14 +60,12 @@ export default {
                   .catch((err) => console.log(err.message))
               })
               .then(() => {
-                that.newNotif('Berhasil Subscribe')
                 console.log('Server Stored Subscription.')
               })
               .catch((err) => {
                 console.log('Subscribe Error:', err)
               })
           } else {
-            that.modal = false
             console.log('subscription sudah ada')
           }
         })

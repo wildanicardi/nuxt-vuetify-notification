@@ -102,6 +102,9 @@ export default {
       },
     },
   },
+  workbox: {
+    importScripts: ['custom-sw.js'],
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
